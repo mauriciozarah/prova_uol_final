@@ -96,7 +96,7 @@ class AlunoController extends Controller
     {
         $resAluno      = Aluno::findOrFail($id);
         $resMatricula  = Matricula::where('aluno_id',$id)->where('ativo', 1)->get();
-        $resCurso      = Curso::orderBy('nome', 'ASC')->get();
+        $resCurso      = Curso::where('ativo', 1)->orderBy('nome', 'ASC')->get();
         $qtdCurso      = (count($resCurso) + 1);
         $qtdMatricula  = count($resMatricula);
 
