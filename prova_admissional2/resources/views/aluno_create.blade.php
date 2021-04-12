@@ -70,7 +70,7 @@
                     <div class="col-md-10" id="curso0">
                         <div class="form-group">
                             <select name="curso_id[]" class="form-control" id="c0" required="required">
-                                <option>Escolha o Curso</option>
+                                <option value="">Escolha o Curso</option>
                                 @foreach($cursos as $c)
                                     <option value="{{$c->id}}">{{$c->nome}}</option>
                                 @endforeach

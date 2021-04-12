@@ -31,7 +31,7 @@ class AlunoController extends Controller
     public function create()
     {
         //
-        $cursos = Curso::orderBy('nome', 'ASC')->get();
+        $cursos = Curso::where('ativo', 1)->orderBy('nome', 'ASC')->get();
         return view('aluno_create', compact('cursos'));
 
     }
