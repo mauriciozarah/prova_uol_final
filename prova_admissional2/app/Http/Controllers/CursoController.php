@@ -134,7 +134,7 @@ class CursoController extends Controller
     }
 
     public function ajaxParaAluno(){
-        $resultSet = Curso::orderBy('nome','ASC')->get();
+        $resultSet = Curso::where('ativo', 1)->orderBy('nome','ASC')->get();
   
         return response()->json($resultSet);
     }
